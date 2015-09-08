@@ -1,0 +1,11 @@
+{
+  "page": {
+    "/": "home.html"
+  },
+  "handler": {
+    "views": {
+      "/": "home.html",
+      "/home": "home.html"
+    }
+  }
+}

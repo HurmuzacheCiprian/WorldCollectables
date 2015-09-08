@@ -1,0 +1,11 @@
+{
+  "name": "WorldCollectables",
+  "version": "0.0.1",
+  "description": "Frontend part of the collectors world",
+  "dependencies": {
+    "promised-io": "https://github.com/kriszyp/promised-io/archive/master.tar.gz",
+    "crypto": "*",
+    "connect": "2.7.x",
+    "cookie": "*"
+  }
+}
