@@ -1,8 +1,10 @@
 /**
+ * Module used to load the simple html pages
+ *
  * Created by churmuzache on 9/8/15.
  */
 var configuration = require('../../resources/configuration.json'),
-    fs=require('fs'),
+    fs = require('fs'),
     url = require('url'),
     path = require('path'),
     Promise = require('promised-io/promise');
@@ -10,54 +12,55 @@ var configuration = require('../../resources/configuration.json'),
 function route(request, response) {
     var path = url.parse(request.url).pathname,
         views = configuration.handler.views;
-        path = path.split('.')[0];  //if the url is /home.html
+    path = path.split('.')[0];
 
-    if(views[path]) {
-        console.log('Page found for path '+path);
+    if (views[path]) {
         handle(request, response, path);
     } else {
-        console.log('Serve not found page');
         serveNotFoundPage(response);
     }
 }
 
-function handle(request,response, pathOfPage) {
+function handle(request, response, pathOfPage) {
     var page = configuration.handler.views[pathOfPage],
-        htmlDir = path.join(process.cwd(),'../client/html');
-    var pagePath = path.join(htmlDir,page);
-    fs.exists(pagePath, function(exists) {
-       if(exists) {
-           fs.readFile(pagePath, 'utf8', function (err, data) {
-               if (err) {
-                   serveNotFoundPage(response);
-               } else {
-                   servePage(data, response);
-               }
-           });
-       }
-    });
+        htmlDir = path.join(process.cwd(), './client/html');
+    var pagePath = path.join(htmlDir, page);
+    console.log(pagePath);
+    fs.exists(pagePath, function (exists) {
+        if (exists) {
+            fs.readFile(pagePath, 'utf8', function (err, data) {
+                if (err) {
+                    serveNotFoundPage(response);
+                } else {
+                    servePage(data, response);
+                }
+            });
+        } else {
+            serveNotFoundPage(response);
+        }
 
+    });
 }
 
 function servePage(data, response) {
-    if(!response.finished) {
+    if (!response.finished) {
         response.writeHead(200, {
-            'Content-Length':data.length,
-            'Content-Type':'text/html'
+            'Content-Length': data.length,
+            'Content-Type': 'text/html'
         });
         response.end(data);
     }
 }
 
 function serveNotFoundPage(response) {
-    if(!response.finished) {
+    if (!response.finished) {
         var data = 'Page not found!';
-        response.writeHead(404,{
-            'Content-Length':data.length,
-            'Content-Type':'text/html'
+        response.writeHead(404, {
+            'Content-Length': data.length,
+            'Content-Type': 'text/html'
         });
         response.end(data);
     }
 }
 
-exports.route=route;
+exports.route = route;
