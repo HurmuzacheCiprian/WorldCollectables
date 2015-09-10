@@ -5,15 +5,33 @@
     <title></title>
     <script src="../../resources/lib/jquery-1.11.1.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <app name="loginPage"></app>
 </head>
 <body>
 
-    <div class="login-container">
-        <div id="login-container-id">
-            <p>User name:</p><input type="text" id="login-container-u">
-            <p>Password:</p><input type="password" id="login-container-p"/>
+<div id="login-bar">
+
+</div>
+
+<div class="login-container">
+    <div id="login-container-id">
+        <div style="float:left; margin-left:15%;">
+            User name
+        </div>
+        <div>
+            <input type="text" id="login-container-u" style="border-radius: 3px;">
+        </div>
+        <div style="float:left; margin-left:15%">
+            Password
+        </div>
+        <div>
+            <input type="password" id="login-container-p" style="margin-left:3%;border-radius: 3px;"/>
+        </div>
+        <div>
+            <button id="login-button" style="border-radius: 3px;margin-left: 44%;">Login</button>
         </div>
     </div>
+</div>
 
 
 </body>

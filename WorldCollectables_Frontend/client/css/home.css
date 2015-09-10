@@ -1,18 +1,41 @@
 .login-container {
     height: 50%;
     width: 50%;
-    border: 2px solid black;
+    border: 2px solid #96dafa;
     padding: 2px;
     margin-left: 25%;
-    margin-top: 25%;
+    margin-right: 25%;
+    margin-top:10%;
+    background-color: #A9D0F5;
+    float:left;
 }
 
 #login-container-id {
     height: 50%;
     width: 50%;
-    border: 2px solid black;
     padding: 2px;
-    margin-left: 25%;
-    position:relative;
+    margin-left: 23%;
+    position: relative;
+    font-family: cursive;
+}
 
+#login-container-id > div {
+    padding: 7px;
+}
+
+#login-globe-right {
+    margin: 3%;
+    float: right;
+}
+
+#login-globe-left {
+    margin: 3%;
+    float: left;
+}
+
+#login-bar {
+
+}
+
+body {
 }
