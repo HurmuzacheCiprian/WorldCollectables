@@ -1,12 +1,11 @@
 .login-container {
     height: 50%;
     width: 50%;
-    border: 2px solid #96dafa;
+    border: 2px solid green;
     padding: 2px;
     margin-left: 25%;
     margin-right: 25%;
     margin-top:10%;
-    background-color: #A9D0F5;
     float:left;
 }
 
@@ -33,9 +32,49 @@
     float: left;
 }
 
-#login-bar {
-
+.login-header {
+    border: 2px solid green;
+    background-color: green;
+    height: 100px;
+    margin-bottom:10px;
+    width:100%;
 }
 
-body {
+.login-header > p {
+    color: white;
+    font-family: cursive;
+    font-size: -webkit-xxx-large;
+    margin: 0px;
+    padding: 10px;
+    display: inline;
+    float: right;
+}
+
+.login-footer {
+    display: block;
+    height: 70px;
+    float: left;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: green;
+}
+
+.login-footer > p {
+    display: block;
+    margin-top: 2%;
+    margin-left: 44%;
+    color:#ffffff;
+}
+
+#login-button {
+    border-radius: 3px;
+    margin-left: 44%;
+    background-color: green;
+    text-decoration-color: #ffffff;
+    width: 6em;
+    height: 3em;
+    font-size: 13px;
+    color:#ffffff;
 }
