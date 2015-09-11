@@ -25,7 +25,6 @@ function handle(request, response, pathOfPage) {
     var page = configuration.handler.views[pathOfPage],
         htmlDir = path.join(process.cwd(), './client/html');
     var pagePath = path.join(htmlDir, page);
-    console.log(pagePath);
     fs.exists(pagePath, function (exists) {
         if (exists) {
             fs.readFile(pagePath, 'utf8', function (err, data) {

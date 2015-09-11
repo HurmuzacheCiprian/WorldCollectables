@@ -9,20 +9,17 @@ var path = require('path'),
 
 function route(request, response) {
     var path = url.parse(request.url).pathname;
-    var pathLength = path.length-1;
-        path = path.split('/');
-
-        handle(request, response, path[path.length-1]);
-
+    handle(path, response);
 }
 
-function handle(request, response, pagePath) {
-    var jsDir = path.join(process.cwd(), './resources/lib');
-    var jsPath = path.join(jsDir,pagePath);
-    fs.exists(jsPath,function(exists) {
-        if(exists) {
-            fs.readFile(jsPath,'utf-8', function(error, data) {
-                if(error) {
+function handle(pagePath, response) {
+    var jsDir = path.join(process.cwd(), './client');
+    var jsPath = path.join(jsDir, pagePath);
+    console.log(jsPath);
+    fs.exists(jsPath, function (exists) {
+        if (exists) {
+            fs.readFile(jsPath, 'utf-8', function (error, data) {
+                if (error) {
                     serveNotFoundPage(response);
                 } else {
                     servePage(data, response);
@@ -37,8 +34,7 @@ function handle(request, response, pagePath) {
 function servePage(data, response) {
     if (!response.finished) {
         response.writeHead(200, {
-            'Content-Length': data.length,
-            'Content-Type': 'text/javascript'
+            'Content-Type': 'application/javascript'
         });
         response.end(data);
     }
@@ -49,7 +45,7 @@ function serveNotFoundPage(response) {
         var data = 'Page not found!';
         response.writeHead(404, {
             'Content-Length': data.length,
-            'Content-Type': 'text/html'
+            'Content-Type': 'text/javascript'
         });
         response.end(data);
     }
