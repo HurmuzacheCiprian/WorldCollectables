@@ -32,24 +32,6 @@
     float: left;
 }
 
-.login-header {
-    border: 2px solid green;
-    background-color: green;
-    height: 100px;
-    margin-bottom:10px;
-    width:100%;
-}
-
-.login-header > p {
-    color: white;
-    font-family: cursive;
-    font-size: -webkit-xxx-large;
-    margin: 0px;
-    padding: 10px;
-    display: inline;
-    float: right;
-}
-
 .login-footer {
     display: block;
     height: 70px;
@@ -57,8 +39,8 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    position: absolute;
     background-color: green;
+    margin-top:47%;
 }
 
 .login-footer > p {
@@ -77,4 +59,43 @@
     height: 3em;
     font-size: 13px;
     color:#ffffff;
+}
+
+.home-menu-bar {
+    position: relative;
+    margin: 5px;
+    display: block;
+    height:41px;
+}
+
+.home-menu-items {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    cursor:pointer
+}
+
+li:hover, li:active {
+    background-color: #7A991A;
+}
+
+body {
+    height:100%;
+    width:100%;
 }
