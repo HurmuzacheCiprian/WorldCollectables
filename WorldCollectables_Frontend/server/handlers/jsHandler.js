@@ -13,9 +13,8 @@ function route(request, response) {
 }
 
 function handle(pagePath, response) {
-    var jsDir = path.join(process.cwd(), './client');
+    var jsDir = path.join(process.cwd(), '../client');
     var jsPath = path.join(jsDir, pagePath);
-    console.log(jsPath);
     fs.exists(jsPath, function (exists) {
         if (exists) {
             fs.readFile(jsPath, 'utf-8', function (error, data) {

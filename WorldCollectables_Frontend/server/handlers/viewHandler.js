@@ -23,7 +23,7 @@ function route(request, response) {
 
 function handle(request, response, pathOfPage) {
     var page = configuration.handler.views[pathOfPage],
-        htmlDir = path.join(process.cwd(), './client/html');
+        htmlDir = path.join(process.cwd(), '../client/html');
     var pagePath = path.join(htmlDir, page);
     fs.exists(pagePath, function (exists) {
         if (exists) {

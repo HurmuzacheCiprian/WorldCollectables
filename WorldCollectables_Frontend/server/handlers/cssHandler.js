@@ -18,7 +18,7 @@ function route(request, response) {
 }
 
 function handle(request, response, pagePath) {
-    var cssDir = path.join(process.cwd(), './client/css');
+    var cssDir = path.join(process.cwd(), '../client/css');
     var cssPath = path.join(cssDir, pagePath);
     fs.exists(cssPath, function (exists) {
         if (exists) {

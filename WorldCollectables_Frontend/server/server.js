@@ -24,6 +24,7 @@ function start() {
 }
 
 function handleRequestResponse(request, response) {
+    console.log(request.url);
     var isControllerHandler = request.url.indexOf('/controller') != -1;
     var isJs = request.url.indexOf('.js') != -1;
     var isCss = request.url.indexOf('.css') != -1;
