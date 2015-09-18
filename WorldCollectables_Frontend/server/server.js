@@ -11,7 +11,8 @@ var handlers = {
     'html': require('./handlers/viewHandler'),
     'js' : require('./handlers/jsHandler'),
     'controller' : require('./handlers/controllerHandler'),
-    'css' : require('./handlers/cssHandler')
+    'css' : require('./handlers/cssHandler'),
+    'image': require('./handlers/resourceHandler')
     //TODO for others
 };
 
@@ -24,10 +25,10 @@ function start() {
 }
 
 function handleRequestResponse(request, response) {
-    console.log(request.url);
     var isControllerHandler = request.url.indexOf('/controller') != -1;
     var isJs = request.url.indexOf('.js') != -1;
     var isCss = request.url.indexOf('.css') != -1;
+    var isImage = request.url.indexOf('/resources') != -1;
 
     if (isControllerHandler) {
         handlers['controller'].route(request, response);
@@ -35,7 +36,10 @@ function handleRequestResponse(request, response) {
         handlers['js'].route(request, response);
     } else if(isCss) {
         handlers['css'].route(request, response);
-    } else {    //The default case
+    } else if (isImage){
+        handlers['image'].route(request,response);
+    }
+    else {    //The default case
         handlers['html'].route(request, response);
     }
 }

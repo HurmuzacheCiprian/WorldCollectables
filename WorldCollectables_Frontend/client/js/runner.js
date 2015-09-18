@@ -21,7 +21,6 @@ Runner.run = function () {
     var appName = $('app').attr('name');
     require(['/js/' + appInfo[appName].controller], function (controller) {
         var appController = new controller();
-        console.log('Invoke method start of controller');
         appController.start();
     });
 };

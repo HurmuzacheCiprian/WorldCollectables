@@ -1,0 +1,27 @@
+[
+  {
+    "imagePath":"../resources/images/panda.jpg",
+    "title":"Buy this panda!",
+    "description":"This the world cutest panda :D"
+  },
+  {
+    "imagePath":"../resources/images/tiger.jpg",
+    "title":"Buy this tiger!",
+    "description":"This the world cutest tiger is here :D"
+  },
+  {
+    "imagePath":"../resources/images/ponny.jpg",
+    "title":"Buy this panda!",
+    "description":"This the world cutest ponny :D"
+  },
+  {
+    "imagePath":"../resources/images/tiger.jpg",
+    "title":"Buy this panda!",
+    "description":"This the world cutest tiger :D"
+  },
+  {
+    "imagePath":"../resources/images/panda.jpg",
+    "title":"Buy this panda!",
+    "description":"This the world cutest panda :D"
+  }
+]

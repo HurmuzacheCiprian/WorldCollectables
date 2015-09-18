@@ -1,12 +1,13 @@
 {
   "page": {
-    "/": "home.html"
+    "/": "login.html"
   },
   "handler": {
     "views": {
-      "/": "home.html",
+      "/": "login.html",
       "/home": "home.html",
-      "/testBootstrap":"testBootstrap.html"
+      "/testBootstrap":"testBootstrap.html",
+      "/header":"header.html"
     }
   }
 }

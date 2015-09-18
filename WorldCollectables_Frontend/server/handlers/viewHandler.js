@@ -13,7 +13,6 @@ function route(request, response) {
     var path = url.parse(request.url).pathname,
         views = configuration.handler.views;
     path = path.split('.')[0];
-
     if (views[path]) {
         handle(request, response, path);
     } else {
