@@ -6,6 +6,7 @@
     "promised-io": "https://github.com/kriszyp/promised-io/archive/master.tar.gz",
     "crypto": "*",
     "connect": "2.7.x",
-    "cookie": "*"
+    "cookie": "*",
+    "bower":"*"
   }
 }

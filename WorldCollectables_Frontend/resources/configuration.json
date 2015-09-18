@@ -5,7 +5,8 @@
   "handler": {
     "views": {
       "/": "home.html",
-      "/home": "home.html"
+      "/home": "home.html",
+      "/testBootstrap":"testBootstrap.html"
     }
   }
 }

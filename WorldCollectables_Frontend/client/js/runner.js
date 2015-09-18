@@ -11,13 +11,16 @@ var appInfo = {
     },
     'login': {
         'controller': 'loginController.js'
+    },
+    'register': {
+        'controller':'registerController.js'
     }
 };
 
 Runner.run = function () {
     var appName = $('app').attr('name');
-    require(['/js/' + appInfo[appName].controller], function (Controller) {
-        var appController = new Controller();
+    require(['/js/' + appInfo[appName].controller], function (controller) {
+        var appController = new controller();
         console.log('Invoke method start of controller');
         appController.start();
     });

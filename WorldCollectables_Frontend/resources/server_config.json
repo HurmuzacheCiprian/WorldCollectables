@@ -2,5 +2,10 @@
   "localhost": {
     "host": "localhost",
     "port": "8081"
+  },
+  "openshift": {
+    "host":"",
+    "port":""
   }
+
 }
